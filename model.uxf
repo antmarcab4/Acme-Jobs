@@ -18,13 +18,13 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>602</x>
+      <x>560</x>
       <y>203</y>
-      <w>70</w>
-      <h>77</h>
+      <w>112</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>140.0;10.0;10.0;30.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -74,13 +74,13 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>651</x>
+      <x>581</x>
       <y>203</y>
-      <w>70</w>
-      <h>77</h>
+      <w>91</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;90.0</additional_attributes>
+    <additional_attributes>110.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -179,8 +179,8 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>504</x>
-      <y>266</y>
+      <x>462</x>
+      <y>224</y>
       <w>140</w>
       <h>63</h>
     </coordinates>
@@ -194,8 +194,8 @@ Provider
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>665</x>
-      <y>266</y>
+      <x>546</x>
+      <y>294</y>
       <w>147</w>
       <h>63</h>
     </coordinates>
@@ -299,8 +299,8 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>483</x>
-      <y>623</y>
+      <x>224</x>
+      <y>343</y>
       <w>231</w>
       <h>105</h>
     </coordinates>
@@ -318,8 +318,8 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>707</x>
-      <y>483</y>
+      <x>245</x>
+      <y>665</y>
       <w>224</w>
       <h>119</h>
     </coordinates>
@@ -338,8 +338,8 @@ Pattern(regexp = "^O[A-Z]{4}\\-\\d{5}$")}</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>602</x>
-      <y>364</y>
+      <x>259</x>
+      <y>462</y>
       <w>196</w>
       <h>49</h>
     </coordinates>
@@ -352,10 +352,10 @@ Pattern(regexp = "^O[A-Z]{4}\\-\\d{5}$")}</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>315</x>
-      <y>343</y>
+      <x>14</x>
+      <y>371</y>
       <w>189</w>
-      <h>70</h>
+      <h>77</h>
     </coordinates>
     <panel_attributes>InvestRecord
 --
@@ -368,8 +368,8 @@ Pattern(regexp = "^O[A-Z]{4}\\-\\d{5}$")}</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>133</x>
-      <y>441</y>
+      <x>7</x>
+      <y>455</y>
       <w>231</w>
       <h>77</h>
     </coordinates>
@@ -384,8 +384,8 @@ Pattern(regexp = "^O[A-Z]{4}\\-\\d{5}$")}</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>441</x>
-      <y>448</y>
+      <x>7</x>
+      <y>665</y>
       <w>217</w>
       <h>140</h>
     </coordinates>
@@ -422,5 +422,78 @@ Pattern(regexp = "^O[A-Z]{4}\\-\\d{5}$")}</panel_attributes>
 +stars: Integer {Max(5), Min(0)}
 +incorporated : boolean {NotNull}</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>714</x>
+      <y>280</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Employer
+--
++ company: String {NotBlank}
++ sector: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>203</y>
+      <w>119</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>637</x>
+      <y>427</y>
+      <w>301</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Job
+--
++reference: String {Unique, NotBlank, Length(min=5,max=10)}
++title: String {NotBlank}
++deadline: String {NotNull, Temporal(TIMESTAMP)}
++salary: Money {NotNull, Valid}
++description: String {NotBlank}
++moreInfo: String {URL}
++finalMode: boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>994</x>
+      <y>322</y>
+      <w>133</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+&lt;&lt;someStereotype&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>777</x>
+      <y>343</y>
+      <w>91</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+Registered By &gt;
+m1=0..*
+m2=1
+r2=+nav
+</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

@@ -18,6 +18,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
+
       <x>511</x>
       <y>203</y>
       <w>161</w>
@@ -25,6 +26,7 @@ bg=yellow</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>210.0;10.0;10.0;80.0</additional_attributes>
+
   </element>
   <element>
     <id>UMLClass</id>
@@ -74,13 +76,15 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>651</x>
+      <x>581</x>
       <y>203</y>
+
       <w>154</w>
       <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;200.0;100.0</additional_attributes>
+
   </element>
   <element>
     <id>UMLClass</id>
@@ -179,8 +183,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
+
       <x>413</x>
       <y>259</y>
+
       <w>140</w>
       <h>63</h>
     </coordinates>
@@ -194,8 +200,10 @@ Provider
   <element>
     <id>UMLClass</id>
     <coordinates>
+
       <x>749</x>
       <y>273</y>
+
       <w>147</w>
       <h>63</h>
     </coordinates>
@@ -299,8 +307,10 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
+
       <x>448</x>
       <y>812</y>
+
       <w>231</w>
       <h>105</h>
     </coordinates>
@@ -318,7 +328,9 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
+
       <x>735</x>
+
       <y>665</y>
       <w>224</w>
       <h>119</h>
@@ -338,8 +350,10 @@ Pattern(regexp = "^O[A-Z]{4}\\-\\d{5}$")}</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
+
       <x>749</x>
       <y>812</y>
+
       <w>196</w>
       <h>49</h>
     </coordinates>
@@ -352,10 +366,12 @@ Pattern(regexp = "^O[A-Z]{4}\\-\\d{5}$")}</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
+
       <x>238</x>
       <y>336</y>
+
       <w>189</w>
-      <h>70</h>
+      <h>77</h>
     </coordinates>
     <panel_attributes>InvestRecord
 --
@@ -368,8 +384,8 @@ Pattern(regexp = "^O[A-Z]{4}\\-\\d{5}$")}</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>133</x>
-      <y>441</y>
+      <x>7</x>
+      <y>455</y>
       <w>231</w>
       <h>77</h>
     </coordinates>
@@ -384,8 +400,10 @@ Pattern(regexp = "^O[A-Z]{4}\\-\\d{5}$")}</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
+
       <x>462</x>
       <y>658</y>
+
       <w>217</w>
       <h>140</h>
     </coordinates>
@@ -426,6 +444,7 @@ Pattern(regexp = "^O[A-Z]{4}\\-\\d{5}$")}</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
+
       <x>679</x>
       <y>350</y>
       <w>203</w>
@@ -436,11 +455,13 @@ Auditors
 --
 + firm: String {NotBlank}
 + responsibility statement: String {NotBlank}</panel_attributes>
+
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+
       <x>651</x>
       <y>203</y>
       <w>112</w>
@@ -448,10 +469,12 @@ Auditors
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;140.0;210.0</additional_attributes>
+
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
+
       <x>511</x>
       <y>350</y>
       <w>140</w>
@@ -462,11 +485,13 @@ Workers
 --
 + qualification record: String {NotBlank}
 + skill record: String {NotBlank}</panel_attributes>
+
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+
       <x>574</x>
       <y>203</y>
       <w>98</w>
@@ -474,10 +499,12 @@ Workers
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>120.0;10.0;10.0;210.0</additional_attributes>
+
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+
       <x>574</x>
       <y>413</y>
       <w>77</w>
@@ -537,5 +564,6 @@ m2= 0...*</panel_attributes>
 + moment: Date {Temporal(TIMESTAMP),Past}
 + body: String{NotBlank}</panel_attributes>
     <additional_attributes/>
+
   </element>
 </diagram>

@@ -91,6 +91,11 @@ master.menu.employer = Employer
 master.menu.challenge.list = Challenges
 master.menu.challenge.create = Create Challenge
 
+# master.menu.auditor ####################################################
+ 
+ master.menu.auditor = Auditor
+ master.menu.auditor.job.list= Job list
+
 # master.footer ###############################################################
 
 master.footer.title.about = About us

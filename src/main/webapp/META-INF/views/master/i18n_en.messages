@@ -53,6 +53,10 @@ master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
 master.menu.provider.createRequest = Create Request
 
+# master.menu.provider ########################################################
+
+master.menu.employer.listJobs = Jobs
+
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer
@@ -78,6 +82,7 @@ master.menu.announcement.announcement-list = Announcements
 master.menu.investor-record.investor-record-list = Investor Records
 master.menu.authenticated.company-records.list = Company Records
 master.menu.administrator.announcement.create = Create announcement
+master.menu.employer = Employer 
 
 
 

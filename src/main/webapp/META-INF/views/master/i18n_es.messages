@@ -53,6 +53,10 @@ master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
 master.menu.provider.createRequest = Crear Request
 
+# master.menu.provider ########################################################
+
+master.menu.employer.listJobs = Trabajos
+
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
@@ -82,7 +86,7 @@ master.menu.announcement.announcement-list = Lista de anuncios
 master.menu.investor-record.investor-record-list = Declaraciones de inversión
 master.menu.user-account.offerlist = Lista de Ofertas
 master.menu.authenticated.company-records.list = Registros de empresa
-
+master.menu.employer = Empleado
 
 
 ﻿# master.footer ###############################################################

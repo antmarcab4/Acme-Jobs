@@ -282,51 +282,53 @@
 	
 	<!-- Applications -->
 	
+	
+	
 	<bean id="application1" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="title1"/>
 		<property name="status" value="rejected"/>
-		<property name="moment" value="2019/01/24 11:35"/>
-		<property name="statements" value="Lorem"/>
+		<property name="creationMoment" value="2019/01/24 11:35"/>
+		<property name="statement" value="Lorem"/>
 		<property name="skills" value="skill1, skill3"/>
 		<property name="qualifications" value="qualification4"/>
 		<property name="worker" ref="worker1Worker"/>
 	</bean>
 	
 	<bean id="application2" class="acme.entities.applications.Application">
-		<property name="referenceNumber" value="title1"/>
+		<property name="referenceNumber" value="title2"/>
 		<property name="status" value="pending"/>
-		<property name="moment" value="2019/09/24 10:00"/>
-		<property name="statements" value="Lorem"/>
+		<property name="creationMoment" value="2019/09/24 10:00"/>
+		<property name="statement" value="Lorem"/>
 		<property name="skills" value="skill2"/>
 		<property name="qualifications" value="qualification1, qualification2"/>
 		<property name="worker" ref="worker1Worker"/>
 	</bean>
 	
 	<bean id="application3" class="acme.entities.applications.Application">
-		<property name="referenceNumber" value="title1"/>
+		<property name="referenceNumber" value="title3"/>
 		<property name="status" value="pending"/>
-		<property name="moment" value="2019/10/24 10:00"/>
-		<property name="statements" value="Lorem"/>
+		<property name="creationMoment" value="2019/10/24 10:00"/>
+		<property name="statement" value="Lorem"/>
 		<property name="skills" value="skill1"/>
 		<property name="qualifications" value="qualification1"/>
 		<property name="worker" ref="worker1Worker"/>
 	</bean>
 	
 	<bean id="application4" class="acme.entities.applications.Application">
-		<property name="referenceNumber" value="title1"/>
+		<property name="referenceNumber" value="title4"/>
 		<property name="status" value="accepted"/>
-		<property name="moment" value="2019/04/04 12:05"/>
-		<property name="statements" value="Lorem"/>
+		<property name="creationMoment" value="2019/04/04 12:05"/>
+		<property name="statement" value="Lorem"/>
 		<property name="skills" value="skill4"/>
 		<property name="qualifications" value="qualification3, qualification4"/>
 		<property name="worker" ref="worker2Worker"/>
 	</bean>
 	
 	<bean id="application5" class="acme.entities.applications.Application">
-		<property name="referenceNumber" value="title1"/>
+		<property name="referenceNumber" value="title5"/>
 		<property name="status" value="accepted"/>
-		<property name="moment" value="2019/09/11 09:30"/>
-		<property name="statements" value="Lorem"/>
+		<property name="creationMoment" value="2019/09/11 09:30"/>
+		<property name="statement" value="Lorem"/>
 		<property name="skills" value="skill3, skill4"/>
 		<property name="qualifications" value="qualification3"/>
 		<property name="worker" ref="worker2Worker"/>
@@ -355,7 +357,7 @@
 		</property>
 	</bean>	
 	
-	<bean name= "auditor1Worker" class="acme.entities.roles.Auditor">
+	<bean name= "auditor1Auditor" class="acme.entities.roles.Auditor">
 		<property name="firm" value="firm1"/>
 		<property name="responsabiltyStatement" value="responsability statement1"/>
 		<property name="userAccount" ref="auditor1UserAccount"/>
@@ -386,7 +388,7 @@
 		</property>
 	</bean>	
 	
-	<bean name= "auditor2Worker" class="acme.entities.roles.Auditor">
+	<bean name= "auditor2Auditor" class="acme.entities.roles.Auditor">
 		<property name="firm" value="firm2"/>
 		<property name="responsabiltyStatement" value="responsability statement2"/>
 		<property name="userAccount" ref="auditor2UserAccount"/>
@@ -397,6 +399,8 @@
 	</bean>
 	
 	<!-- Audits -->
+	
+	<!--
 	
 	<bean id="audit1" class="acme.entities.audits.Audit">
 		<property name="title" value="title1"/>
@@ -437,5 +441,7 @@
 		<property name="body" value="Amet"/>
 		<property name="auditor" ref="auditor2Auditor"/>
 	</bean>
+	
+	-->
 	
 </beans>

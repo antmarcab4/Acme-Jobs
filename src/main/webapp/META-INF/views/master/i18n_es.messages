@@ -62,6 +62,12 @@ master.menu.employer = Empleado
 
 master.menu.consumer = Consumidor
 master.menu.consumer.create.offer= Crear oferta
+
+# master.menu.worker ##########################################################
+
+master.menu.worker = Trabajador
+master.menu.worker.listApplication = Listado de aplicaciones
+
 # master.menu.challenge ####################################################
 
 master.menu.challenge.list = Desafíos

@@ -597,4 +597,62 @@ m1=0..*
 m2=1</panel_attributes>
     <additional_attributes>190.0;180.0;10.0;10.0</additional_attributes>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>896</x>
+      <y>651</y>
+      <w>140</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Descriptor
+--
++description: String {NotBlank}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>952</x>
+      <y>539</y>
+      <w>63</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+Describes
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>889</x>
+      <y>812</y>
+      <w>140</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Duty
+--
++title: String {NotBlank}
++description: String {NotBlank}
++percentage: Double {NotNull}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>952</x>
+      <y>679</y>
+      <w>35</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+Has
+m1=1
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
 </diagram>

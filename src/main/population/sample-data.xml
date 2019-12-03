@@ -199,37 +199,28 @@
 		<property name="title" value="Title 1"/>
 		<property name="deadline" value="2030/12/11 23:59"/>
 		<property name="salary" value="€ 15,000.98"/>
-		<property name="descriptor" ref="Descriptor1"/>	
-		<!-- <property name="description" value="Lorem ipsum sit dolor amet"/>-->
+		<property name="description" value="Lorem ipsum sit dolor amet"/>
 		<property name="moreInfo" value="http://www.example.com"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
 	</bean>  
 	
-	<bean name="Descriptor1" class="acme.entities.descriptors.Descriptor">
-				<property name="description" value="Example"/>
-				<property name="duties">
-					<list>
-						<ref bean="Duty1"/>
-						<ref bean="Duty2"/>
-					</list>
-				</property>
-	</bean>
-			
 	<bean name="Duty1" class="acme.entities.duties.Duty">
 		<property name="title" value="Duty1"/>
 		<property name="description" value="Furulafurula"/>
 		<property name="percentage" value="30"/>
+		<property name="job" ref="job1"/>
 	</bean>
 	
 	<bean name="Duty2" class="acme.entities.duties.Duty">
 		<property name="title" value="Duty2"/>
 		<property name="description" value="Esto es parte del trabajo"/>
 		<property name="percentage" value="25"/>
+		<property name="job" ref="job1"/>
 	</bean>
 		
 	
-	<!--<bean name="job2" class="acme.entities.jobs.Job">
+	<bean name="job2" class="acme.entities.jobs.Job">
 		<property name="reference" value="EMP1-JOB2"/>
 		<property name="title" value="Title 2"/>
 		<property name="deadline" value="2030/12/11 23:59"/>
@@ -238,7 +229,14 @@
 		<property name="moreInfo" value="http://www.example.com"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
-	</bean>  -->
+	</bean>
+	
+	<bean name="Duty3" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty3"/>
+		<property name="description" value="Esto es del trabajo 2"/>
+		<property name="percentage" value="100"/>
+		<property name="job" ref="job2"/>
+	</bean>
     
            <!-- Workers -->
            
@@ -306,10 +304,7 @@
 	
 	<!-- Applications -->
 	
-
-	
-	
-	<bean id="application1" class="acme.entities.applications.Application">
+	 <bean id="application1" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="title1"/>
 		<property name="status" value="rejected"/>
 		<property name="creationMoment" value="2019/01/24 11:35"/>
@@ -357,7 +352,7 @@
 		<property name="skills" value="skill3, skill4"/>
 		<property name="qualifications" value="qualification3"/>
 		<property name="worker" ref="worker2Worker"/>
-	</bean> -->
+	</bean> 
 	
 	<!-- Auditors -->
            
@@ -468,6 +463,5 @@
 		<property name="auditor" ref="auditor2Auditor"/>
 	</bean> -->
 	
-	-->
 	
 </beans>

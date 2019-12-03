@@ -23,7 +23,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-
     create table `application` (
        `id` integer not null,
         `version` integer not null,
@@ -34,6 +33,17 @@
         `statement` varchar(255),
         `status` integer,
         `worker_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `audit_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `moment` datetime(6),
+        `status` integer,
+        `title` varchar(255),
+        `auditor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -113,6 +123,7 @@
         `description` varchar(255),
         `percentage` double precision,
         `title` varchar(255),
+        `job_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -139,13 +150,13 @@
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
+        `description` varchar(255),
         `final_mode` bit not null,
         `more_info` varchar(255),
         `reference` varchar(255),
         `salary_amount` double precision,
         `salary_currency` varchar(255),
         `title` varchar(255),
-        `descriptor_id` integer not null,
         `employer_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -227,9 +238,6 @@ create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
        add constraint UK_kvr5rclgwa51d625rmx13ke96 unique (`duties_id`);
 
     alter table `job` 
-       add constraint UK_qpodqtu8nvqkof3olnqnqcv2l unique (`descriptor_id`);
-
-    alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
 
     alter table `offer` 
@@ -251,11 +259,15 @@ create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
-
     alter table `application` 
        add constraint `FKmbjdoxi3o93agxosoate4sxbt` 
        foreign key (`worker_id`) 
        references `worker` (`id`);
+
+    alter table `audit_record` 
+       add constraint `FKdcrrgv6rkfw2ruvdja56un4ji` 
+       foreign key (`auditor_id`) 
+       references `auditor` (`id`);
 
     alter table `auditor` 
        add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 
@@ -282,15 +294,15 @@ create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
        foreign key (`descriptor_id`) 
        references `descriptor` (`id`);
 
+    alter table `duty` 
+       add constraint `FKs2uoxh4i5ya8ptyefae60iao1` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
     alter table `employer` 
        add constraint FK_na4dfobmeuxkwf6p75abmb2tr 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
-
-    alter table `job` 
-       add constraint `FKfqwyynnbcsq0htxho3vchpd2u` 
-       foreign key (`descriptor_id`) 
-       references `descriptor` (`id`);
 
     alter table `job` 
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 

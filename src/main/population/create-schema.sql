@@ -82,6 +82,31 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `message` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `moment` datetime(6),
+        `tags` varchar(255),
+        `title` varchar(255),
+        `message_thread_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `message_thread` (
+       `id` integer not null,
+        `version` integer not null,
+        `moment` datetime(6),
+        `title` varchar(255),
+        `users` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `message_thread_user_account` (
+       `message_thread_id` integer not null,
+        `useraccount_id` integer not null
+    ) engine=InnoDB;
+
     create table `offer` (
        `id` integer not null,
         `version` integer not null,
@@ -174,6 +199,21 @@ create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `message` 
+       add constraint `FKn5adlx3oqjna7aupm8gwg3fuj` 
+       foreign key (`message_thread_id`) 
+       references `message_thread` (`id`);
+
+    alter table `message_thread_user_account` 
+       add constraint `FKcsl6erkfjmaaiqw9niql8tday` 
+       foreign key (`useraccount_id`) 
+       references `user_account` (`id`);
+
+    alter table `message_thread_user_account` 
+       add constraint `FKtchis3o5qij98x87mty6hdk4d` 
+       foreign key (`message_thread_id`) 
+       references `message_thread` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 

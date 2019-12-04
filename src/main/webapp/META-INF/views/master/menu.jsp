@@ -59,6 +59,7 @@
 	<acme:menu-suboption code="master.menu.investor-record.investor-record-list" action="/authenticated/investor-record/list"/>
 	<acme:menu-suboption code="master.menu.user-account.listRequest" action="/authenticated/request/list"/>
 	<acme:menu-suboption code="master.menu.authenticated.company-records.list" action="/authenticated/company-record/list"/>
+	<acme:menu-suboption code="master.menu.authenticated.message-thread.list" action="/authenticated/message-thread/list_mine"/>
 	
 	</acme:menu-option>
 	

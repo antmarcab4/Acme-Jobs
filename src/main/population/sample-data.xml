@@ -160,5 +160,128 @@
 		<property name="stars" value="3"/>
 		<property name="incorporated" value="true"/>
 	</bean>  
+
+	<!-- Auth accounts -->
+	
+	<bean name="authenticated1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="jose1"/>
+		<property name="password" value="jose1"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class= "acme.datatypes.UserIdentity">
+				<property name="name" value="jose"/>
+				<property name="surname" value="one"/>
+				<property name="email" value="jose1@us.es"/>
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="authenticated1Authenticated"	/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="authenticated2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="jose2"/>
+		<property name="password" value="jose2"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class= "acme.datatypes.UserIdentity">
+				<property name="name" value="jose"/>
+				<property name="surname" value="two"/>
+				<property name="email" value="jose2@us.es"/>
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="authenticated2Authenticated"	/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="authenticated3UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="jose3"/>
+		<property name="password" value="jose3"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class= "acme.datatypes.UserIdentity">
+				<property name="name" value="jose"/>
+				<property name="surname" value="three"/>
+				<property name="email" value="jose3@us.es"/>
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="authenticated3Authenticated"	/>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Roles -->
+	
+	<bean name="authenticated1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="UserAccount" ref="authenticated1UserAccount" />
+	</bean>
+
+	<bean name="authenticated2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="UserAccount" ref="authenticated2UserAccount" />
+	</bean>
+	
+	<bean name="authenticated3Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="UserAccount" ref="authenticated3UserAccount" />
+	</bean>
+
+
+
+	<!-- Message Threads -->
+	
+	<bean id="MessageThread01" class="acme.entities.messagethreads.MessageThread">
+		<property name="title" value="Hilo1"/>
+		<property name="moment" value="2019/06/03 10:35"/>
+		<property name="users" value="a"/>
+		<property name="useraccount">
+		<list>
+			<ref bean="authenticated1UserAccount"></ref>
+		</list></property>
+		
+	</bean>
+	
+	<bean id="MessageThread02" class="acme.entities.messagethreads.MessageThread">
+		<property name="title" value="Hilo2"/>
+		<property name="moment" value="2019/06/03 13:35"/>
+		<property name="users" value="b"/>
+		<property name="useraccount">
+		<list>
+			<ref bean="authenticated1UserAccount"></ref>
+			<ref bean="authenticated2UserAccount"></ref>
+		</list></property>
+	</bean>
+	
+	
+	<!-- Messages -->
+	
+	<bean id="Message01" class="acme.entities.messages.Message">
+		<property name="title" value="Mensaje1"/>
+		<property name="moment" value="2019/06/04 10:45"/>
+		<property name="tags" value="software,analista"/>
+		<property name="body" value="Prueba numero 1"/>
+		<property name="messageThread" ref="MessageThread01" />
+	</bean>
+	
+	<bean id="Message02" class="acme.entities.messages.Message">
+		<property name="title" value="Mensaje2"/>
+		<property name="moment" value="2019/06/05 10:45"/>
+		<property name="tags" value="software,analista"/>
+		<property name="body" value="prueba numero 2"/>
+		<property name="messageThread" ref="MessageThread01" />
+	</bean>
+	
+	<bean id="Message03" class="acme.entities.messages.Message">
+		<property name="title" value="Mensaje3"/>
+		<property name="moment" value="2019/06/06 10:45"/>
+		<property name="tags"><null/></property>
+		<property name="body" value="Prueba numero 3"/>
+		<property name="messageThread" ref="MessageThread02" />
+	</bean>
     
 </beans>

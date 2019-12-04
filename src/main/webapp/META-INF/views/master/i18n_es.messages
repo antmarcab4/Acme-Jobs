@@ -62,6 +62,12 @@ master.menu.employer = Empleado
 
 master.menu.consumer = Consumidor
 master.menu.consumer.create.offer= Crear oferta
+
+# master.menu.worker ##########################################################
+
+master.menu.worker = Trabajador
+master.menu.worker.listApplication = Listado de aplicaciones
+
 # master.menu.challenge ####################################################
 
 master.menu.challenge.list = Desafíos
@@ -81,6 +87,7 @@ master.menu.announcement.announcement-list = Lista de anuncios
 master.menu.investor-record.investor-record-list = Declaraciones de inversión
 master.menu.user-account.offerlist = Lista de Ofertas
 master.menu.authenticated.company-records.list = Registros de empresa
+master.menu.job.list = Trabajos
 
 # master.menu.auditor ####################################################
  

@@ -1,8 +1,6 @@
 
 package acme.entities.roles;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
@@ -18,8 +16,8 @@ public class Worker extends UserRole {
 	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
-	private List<String>		skills;
+  private String				skills;
 
 	@NotBlank
-	private List<String>		qualifications;
+	private String				qualifications;
 }

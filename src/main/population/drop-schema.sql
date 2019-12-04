@@ -31,6 +31,17 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `message` 
+       drop 
+       foreign key `FKn5adlx3oqjna7aupm8gwg3fuj`;
+
+    alter table `message_thread_user_account` 
+       drop 
+       foreign key `FKcsl6erkfjmaaiqw9niql8tday`;
+
+    alter table `message_thread_user_account` 
+       drop 
+       foreign key `FKtchis3o5qij98x87mty6hdk4d`;
     alter table `descriptor_duty` 
        drop 
        foreign key `FK57eqqlhihwvd53ykpmsiqlx2p`;
@@ -89,6 +100,12 @@
 
     drop table if exists `investor_record`;
 
+    drop table if exists `message`;
+
+    drop table if exists `message_thread`;
+
+    drop table if exists `message_thread_user_account`;
+    
     drop table if exists `job`;
 
     drop table if exists `offer`;

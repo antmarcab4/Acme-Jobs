@@ -15,5 +15,6 @@ package acme.components;
 import acme.framework.components.Command;
 
 public enum CustomCommand implements Command {
-	LIST_MINE, LIST_FOR_JOB
+
+	LIST_MINE, LIST_FOR_JOB,  LIST_MESSAGES_BY_THREAD
 }

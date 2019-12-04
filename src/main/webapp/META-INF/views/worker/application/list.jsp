@@ -3,7 +3,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="worker.application.list.label.job" path="job" width="40%"/>
+
 	<acme:list-column code="worker.application.list.label.creation-moment" path="creationMoment" width="30%"/>
 	<acme:list-column code="worker.application.list.label.status" path="status" width="30%"/>
 

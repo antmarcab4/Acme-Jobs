@@ -1,5 +1,5 @@
 
-package acme.features.worker.application;
+package acme.features.employer.application;
 
 import java.util.Collection;
 
@@ -7,17 +7,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.applications.Application;
-import acme.entities.roles.Worker;
+import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class WorkerApplicationListMineService implements AbstractListService<Worker, Application> {
+public class EmployerApplicationListMineService implements AbstractListService<Employer, Application> {
 
 	@Autowired
-	WorkerApplicationRepository repository;
+	private EmployerApplicationRepository repository;
 
 
 	@Override
@@ -33,7 +33,7 @@ public class WorkerApplicationListMineService implements AbstractListService<Wor
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "creationMoment", "status");
+		request.unbind(entity, model, "job", "worker", "creationMoment", "status");
 
 	}
 
@@ -45,7 +45,7 @@ public class WorkerApplicationListMineService implements AbstractListService<Wor
 		Principal principal;
 
 		principal = request.getPrincipal();
-		result = this.repository.findManyByworkerId(principal.getActiveRoleId());
+		result = this.repository.findManyByEmployerId(principal.getActiveRoleId());
 
 		return result;
 	}

@@ -16,11 +16,11 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-	<acme:form-textbox code="worker.application.form.label.reference-number" path="referenceNumber"/>
-	<acme:form-textarea code="worker.application.form.label.status" path="status"/>
-	<acme:form-textarea code="worker.application.form.label.statement" path="statement"/>
-	<acme:form-textarea code="worker.application.form.label.skills" path="skills"/>
-	<acme:form-textbox code="worker.application.form.label.qualifications" path="qualifications"/>
+	<acme:form-textbox code="employer.application.form.label.reference-number" path="referenceNumber"/>
+	<acme:form-textarea code="employer.application.form.label.status" path="status"/>
+	<acme:form-textarea code="employer.application.form.label.statement" path="statement"/>
+	<acme:form-textarea code="employer.application.form.label.skills" path="skills"/>
+	<acme:form-textbox code="employer.application.form.label.qualifications" path="qualifications"/>
 	
 	
 	<acme:form-return code="authenticated.challenge.form.button.return"/>

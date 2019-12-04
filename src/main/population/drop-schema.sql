@@ -31,6 +31,18 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `descriptor_duty` 
+       drop 
+       foreign key `FK57eqqlhihwvd53ykpmsiqlx2p`;
+
+    alter table `descriptor_duty` 
+       drop 
+       foreign key `FKqitedkrksd2w8qyp1fp5eao9f`;
+
+    alter table `duty` 
+       drop 
+       foreign key `FKs2uoxh4i5ya8ptyefae60iao1`;
+
     alter table `employer` 
        drop 
        foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
@@ -66,6 +78,12 @@
     drop table if exists `company_record`;
 
     drop table if exists `consumer`;
+
+    drop table if exists `descriptor`;
+
+    drop table if exists `descriptor_duty`;
+
+    drop table if exists `duty`;
 
     drop table if exists `employer`;
 

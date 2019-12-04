@@ -350,39 +350,6 @@
 	
 	<!-- Duties -->
 	
-	<bean name="employer2UserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="employer2"/>
-		<property name="password" value="employer2"/>
-		<property name="enabled" value="true"/>
-		<property name="identity">	
-			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Employer"/>
-				<property name="surname" value="Two"/>
-				<property name="email" value="employer2@acme.com"/>
-			</bean>
-		</property>
-		<property name="roles">
-			<list>
-				<ref bean="employer2Employer"/>
-				<ref bean="employer2Authenticated"/>
-			</list>
-		</property>
-	</bean>  
-	
-	 <bean name="employer2Employer" class="acme.entities.roles.Employer">
-		<property name="company" value="Employer 2, Inc"/>
-		<property name="sector" value="Sector 2"/>
-		<property name="userAccount" ref="employer2UserAccount"/>
-	</bean> 
-	
-	<bean name="employer2Authenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="employer2UserAccount"/>
-	</bean>
-	
-	
-	
-  <!-- duties -->
-  
 	<bean name="Duty1" class="acme.entities.duties.Duty">
 		<property name="title" value="Duty1"/>
 		<property name="description" value="Furulafurula"/>

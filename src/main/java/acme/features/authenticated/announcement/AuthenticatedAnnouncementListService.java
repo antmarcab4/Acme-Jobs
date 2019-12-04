@@ -50,7 +50,7 @@ public class AuthenticatedAnnouncementListService implements AbstractListService
 
 		Date date2 = new Date();
 		aux.setTime(date2);
-		aux.add(Calendar.MONTH, -2);
+		aux.add(Calendar.MONTH, -1);
 		Date month2 = aux.getTime();
 
 		result = this.repository.findAuthenticated(month2);

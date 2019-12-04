@@ -53,10 +53,23 @@ master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
 master.menu.provider.createRequest = Crear Request
 
+# master.menu.employer ########################################################
+
+master.menu.employer = Empleado
+master.menu.employer.listJobs = Trabajos
+master.menu.employer.listapplications = Listado de aplicaciones
+
+
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
 master.menu.consumer.create.offer= Crear oferta
+
+# master.menu.worker ##########################################################
+
+master.menu.worker = Trabajador
+master.menu.worker.listApplication = Listado de aplicaciones
+
 # master.menu.challenge ####################################################
 
 master.menu.challenge.list = Desafíos
@@ -80,8 +93,13 @@ master.menu.user-account.offerlist = Lista de Ofertas
 master.menu.administrator.announcement.create = Crear anuncio
 master.menu.authenticated.company-records.list = Registros de empresa
 master.menu.authenticated.message-thread.list = Lista de mis hilos
+master.menu.employer = Empleador 
+master.menu.job.list = Trabajos
 
-
+# master.menu.auditor ####################################################
+ 
+ master.menu.auditor = Auditor
+ master.menu.auditor.job.list= Lista de trabajos
 
 ﻿# master.footer ###############################################################
 

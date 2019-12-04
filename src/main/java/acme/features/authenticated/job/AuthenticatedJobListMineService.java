@@ -12,7 +12,6 @@ import acme.entities.jobs.Job;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -46,7 +45,6 @@ public class AuthenticatedJobListMineService implements AbstractListService<Auth
 		assert request != null;
 
 		Collection<Job> result;
-		Principal principal;
 
 		Calendar aux = Calendar.getInstance();
 

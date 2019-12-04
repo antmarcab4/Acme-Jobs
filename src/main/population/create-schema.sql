@@ -147,6 +147,21 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `job` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `final_mode` bit not null,
+        `more_info` varchar(255),
+        `reference` varchar(255),
+        `salary_amount` double precision,
+        `salary_currency` varchar(255),
+        `title` varchar(255),
+        `employer_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `message` (
        `id` integer not null,
         `version` integer not null,
@@ -171,23 +186,6 @@
        `message_thread_id` integer not null,
         `useraccount_id` integer not null
     ) engine=InnoDB;
-
-
-    create table `job` (
-       `id` integer not null,
-        `version` integer not null,
-        `deadline` datetime(6),
-        `description` varchar(255),
-        `final_mode` bit not null,
-        `more_info` varchar(255),
-        `reference` varchar(255),
-        `salary_amount` double precision,
-        `salary_currency` varchar(255),
-        `title` varchar(255),
-        `employer_id` integer not null,
-        primary key (`id`)
-    ) engine=InnoDB;
-
 
     create table `offer` (
        `id` integer not null,
@@ -317,21 +315,6 @@ create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
-    alter table `message` 
-       add constraint `FKn5adlx3oqjna7aupm8gwg3fuj` 
-       foreign key (`message_thread_id`) 
-       references `message_thread` (`id`);
-
-    alter table `message_thread_user_account` 
-       add constraint `FKcsl6erkfjmaaiqw9niql8tday` 
-       foreign key (`useraccount_id`) 
-       references `user_account` (`id`);
-
-    alter table `message_thread_user_account` 
-       add constraint `FKtchis3o5qij98x87mty6hdk4d` 
-       foreign key (`message_thread_id`) 
-       references `message_thread` (`id`);
-
     alter table `descriptor_duty` 
        add constraint `FK57eqqlhihwvd53ykpmsiqlx2p` 
        foreign key (`duties_id`) 
@@ -356,6 +339,21 @@ create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
        foreign key (`employer_id`) 
        references `employer` (`id`);
+
+    alter table `message` 
+       add constraint `FKn5adlx3oqjna7aupm8gwg3fuj` 
+       foreign key (`message_thread_id`) 
+       references `message_thread` (`id`);
+
+    alter table `message_thread_user_account` 
+       add constraint `FKcsl6erkfjmaaiqw9niql8tday` 
+       foreign key (`useraccount_id`) 
+       references `user_account` (`id`);
+
+    alter table `message_thread_user_account` 
+       add constraint `FKtchis3o5qij98x87mty6hdk4d` 
+       foreign key (`message_thread_id`) 
+       references `message_thread` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 

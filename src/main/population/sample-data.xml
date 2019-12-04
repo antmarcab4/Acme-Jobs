@@ -194,16 +194,6 @@
 		<property name="userAccount" ref="employer1UserAccount"/>
 	</bean>
 	
-	 <bean name="job1" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMP1-JOB1"/>
-		<property name="title" value="Title 1"/>
-		<property name="deadline" value="2030/12/11 23:59"/>
-		<property name="salary" value="€ 15,000.98"/>
-		<property name="description" value="Lorem ipsum sit dolor amet"/>
-		<property name="moreInfo" value="http://www.example.com"/>
-		<property name="finalMode" value="true"/>
-		<property name="employer" ref="employer1Employer"/>
-	</bean>  
 	
 	<bean name="Duty1" class="acme.entities.duties.Duty">
 		<property name="title" value="Duty1"/>
@@ -218,7 +208,31 @@
 		<property name="percentage" value="25"/>
 		<property name="job" ref="job1"/>
 	</bean>
+	
+	<bean name="Duty3" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty3"/>
+		<property name="description" value="Esto es del trabajo 2"/>
+		<property name="percentage" value="100"/>
+		<property name="job" ref="job2"/>
+	</bean>
+	
+	<bean name="Duty4" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty4"/>
+		<property name="description" value="Esto es del trabajo 3"/>
+		<property name="percentage" value="100"/>
+		<property name="job" ref="job3"/>
+	</bean>
 		
+	<bean name="job1" class="acme.entities.jobs.Job">
+		<property name="reference" value="EMP1-JOB1"/>
+		<property name="title" value="Title 1"/>
+		<property name="deadline" value="2030/12/11 23:59"/>
+		<property name="salary" value="€ 15,000.98"/>
+		<property name="description" value="Lorem ipsum sit dolor amet"/>
+		<property name="moreInfo" value="http://www.example.com"/>
+		<property name="finalMode" value="true"/>
+		<property name="employer" ref="employer1Employer"/>
+	</bean>  
 	
 	<bean name="job2" class="acme.entities.jobs.Job">
 		<property name="reference" value="EMP1-JOB2"/>
@@ -231,12 +245,17 @@
 		<property name="employer" ref="employer1Employer"/>
 	</bean>
 	
-	<bean name="Duty3" class="acme.entities.duties.Duty">
-		<property name="title" value="Duty3"/>
-		<property name="description" value="Esto es del trabajo 2"/>
-		<property name="percentage" value="100"/>
-		<property name="job" ref="job2"/>
+	<bean name="job3" class="acme.entities.jobs.Job">
+		<property name="reference" value="EMP1-JOB3"/>
+		<property name="title" value="Title 3"/>
+		<property name="deadline" value="2017/12/11 23:59"/>
+		<property name="salary" value="€ 20,000.00"/>
+		<property name="description" value="Lorem ipsum sit dolor amet"/>
+		<property name="moreInfo" value="http://www.example.com"/>
+		<property name="finalMode" value="true"/>
+		<property name="employer" ref="employer1Employer"/>
 	</bean>
+	
     
            <!-- Workers -->
            

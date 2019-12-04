@@ -10,7 +10,7 @@ import acme.entities.duties.Duty;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface EmployerDutyRepository extends AbstractRepository {
+public interface AuthenticatedDutyRepository extends AbstractRepository {
 
 	@Query("select d from Duty d where d.id = ?1")
 	Duty findOneDutyById(int id);

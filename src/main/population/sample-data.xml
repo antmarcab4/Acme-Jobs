@@ -163,7 +163,7 @@
 	
 	
 	
-	<!-- Employer -->
+	<!-- Employers -->
 	
 	<bean name="employer1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="employer1"/>
@@ -194,6 +194,38 @@
 		<property name="userAccount" ref="employer1UserAccount"/>
 	</bean>
 	
+	
+	<bean name="employer2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer2"/>
+		<property name="password" value="employer2"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">	
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Employer"/>
+				<property name="surname" value="Two"/>
+				<property name="email" value="employer2@acme.com"/>
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employer2Employer"/>
+				<ref bean="employer2Authenticated"/>
+			</list>
+		</property>
+	</bean>  
+	
+	 <bean name="employer2Employer" class="acme.entities.roles.Employer">
+		<property name="company" value="Employer 2, Inc"/>
+		<property name="sector" value="Sector 2"/>
+		<property name="userAccount" ref="employer2UserAccount"/>
+	</bean> 
+	
+	<bean name="employer2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employer2UserAccount"/>
+	</bean>
+	
+	<!-- jobs -->
+	
 	 <bean name="job1" class="acme.entities.jobs.Job">
 		<property name="reference" value="EMP1-JOB1"/>
 		<property name="title" value="Title 1"/>
@@ -214,6 +246,17 @@
 		<property name="moreInfo" value="http://www.example.com"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
+	</bean>
+	
+	<bean name="job3" class="acme.entities.jobs.Job">
+		<property name="reference" value="EMP2-JOB3"/>
+		<property name="title" value="Title 3"/>
+		<property name="deadline" value="2040/12/11 23:59"/>
+		<property name="salary" value="€ 20,000.00"/>
+		<property name="description" value="Lorem ipsum sit dolor amet"/>
+		<property name="moreInfo" value="http://www.example.com"/>
+		<property name="finalMode" value="true"/>
+		<property name="employer" ref="employer2Employer"/>
 	</bean>  
     
            <!-- Workers -->
@@ -292,6 +335,7 @@
 		<property name="skills" value="skill1, skill3"/>
 		<property name="qualifications" value="qualification4"/>
 		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job1"/>
 	</bean>
 	
 	<bean id="application2" class="acme.entities.applications.Application">
@@ -302,6 +346,7 @@
 		<property name="skills" value="skill2"/>
 		<property name="qualifications" value="qualification1, qualification2"/>
 		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job1"/>
 	</bean>
 	
 	<bean id="application3" class="acme.entities.applications.Application">
@@ -312,6 +357,7 @@
 		<property name="skills" value="skill1"/>
 		<property name="qualifications" value="qualification1"/>
 		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job3"/>
 	</bean>
 	
 	<bean id="application4" class="acme.entities.applications.Application">
@@ -322,6 +368,7 @@
 		<property name="skills" value="skill4"/>
 		<property name="qualifications" value="qualification3, qualification4"/>
 		<property name="worker" ref="worker2Worker"/>
+		<property name="job" ref="job2"/>
 	</bean>
 	
 	<bean id="application5" class="acme.entities.applications.Application">
@@ -332,6 +379,7 @@
 		<property name="skills" value="skill3, skill4"/>
 		<property name="qualifications" value="qualification3"/>
 		<property name="worker" ref="worker2Worker"/>
+		<property name="job" ref="job3"/>
 	</bean>
 	
 	<!-- Auditors -->

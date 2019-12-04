@@ -9,7 +9,15 @@
 
     alter table `application` 
        drop 
+       foreign key `FKoa6p4s2oyy7tf80xwc4r04vh6`;
+
+    alter table `application` 
+       drop 
        foreign key `FKmbjdoxi3o93agxosoate4sxbt`;
+
+    alter table `audit_record` 
+       drop 
+       foreign key `FKdcrrgv6rkfw2ruvdja56un4ji`;
 
     alter table `auditor` 
        drop 
@@ -46,6 +54,8 @@
     drop table if exists `anonymous`;
 
     drop table if exists `application`;
+
+    drop table if exists `audit_record`;
 
     drop table if exists `auditor`;
 
